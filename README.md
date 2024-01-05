@@ -1,4 +1,4 @@
-
+![Example Image](example.png)
 
 # LinkedIn profile badge
 
