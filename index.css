@@ -58,8 +58,8 @@ footer {
 
 #image-preview {
     position: relative;
-    height: 500px;
-    width: 500px;
+    height: 300px;
+    width: 300px;
     margin: 1em 0;
 }
 
@@ -73,6 +73,6 @@ footer {
 #canvas-image {
     /* for debugging purpose you can make it visible */
     display: none;
-    height: 500px;
-    width: 500px;
+    height: 300px;
+    width: 300px;
 }
