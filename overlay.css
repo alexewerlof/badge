@@ -1,0 +1,46 @@
+#text-circle-path {
+    fill: none;
+    fill-rule: evenodd;
+    stroke: none;
+    stroke-width: 0.283712;
+    stroke-linejoin: round;
+    paint-order: stroke fill markers;
+}
+
+#overlay-text-path {
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 15.875px;
+    font-family: inherit;
+    fill-opacity: 1;
+    stroke: none;
+    stroke-width: 0.264583;
+}
+
+#overlay-text-bg {
+    fill: url(#linearGradient5958);
+    fill-opacity: 1;
+    fill-rule: evenodd;
+    stroke: none;
+    stroke-width: 0.264583;
+    stroke-linejoin: round;
+    paint-order: stroke fill markers;
+}
+
+#overlay-text {
+    font-size: 15.875px;
+    font-family: 'Arial';
+    text-align: end;
+    letter-spacing: 1.50548px;
+    direction: ltr;
+    text-anchor: end;
+    fill-opacity: 1;
+    fill-rule: evenodd;
+    stroke: none;
+    stroke-width: 0.264583;
+    stroke-linejoin: round;
+    stroke-opacity: 1;
+    paint-order: stroke fill markers;
+}
