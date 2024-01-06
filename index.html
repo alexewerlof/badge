@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="overlay.css">
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/png" href="example.png">
+
+    <meta name="description" content="Enhance your LinkedIn profile with our easy-to-use web app. Personalize your profile picture with custom badges. Simple, privacy-focused, and free. Try it now!">
+
     <meta property="og:url" content="https://badge.alexewerlof.com" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="LinkedIn profile badge" />
@@ -14,103 +17,115 @@
     <meta property="og:image" content="https://badge.alexewerlof.com/example.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@your-twitter-handle" />
+    <meta name="twitter:site" content="@alexewerlof" />
     <meta name="twitter:title" content="LinkedIn profile badge" />
     <meta name="twitter:description" content="Create a custom badge for your LinkedIn profile for free" />
     <meta name="twitter:image" content="https://badge.alexewerlof.com/example.png" />
 </head>
 <body>
-    <header>
-        <h1>LinkedIn profile badge</h1>
-    </header>
+    <div id="app">
+        <header>
+            <h1>LinkedIn profile badge</h1>
+            <p>
+                Looking to stand out on LinkedIn with a custom badge? This privacy focused open source app does exactly that.
+                <a href="https://github.com/alexewerlof/badge" target="_blank">Read more...</a>
+            </p>
+        </header>    
+        <main>
+            <label for="portrait-image-upload"><h2>1. Choose Portrait</h2></label>
+            <p>Choose a picture that is in square aspect ratio. We recommend 500x500px. The photo will not leave your browser. All processing is done on your machine.</p>
+            <input type="file" id="portrait-image-upload" accept="image/*">
 
-    <main>
-        <label for="portrait-image-upload"><h2>Portrait</h2></label>
-        <input type="file" id="portrait-image-upload" accept="image/*">
+            <div id="image-preview">
+                <img id="portrait-image" width="200" height="200" src="placeholder.jpg">
+                <svg
+                    id="overlay-svg"
+                    width="200"
+                    height="200"
+                    viewBox="0 0 132.29167 132.29169"
+                    version="1.1"
+                    id="svg5"
+                    xml:space="preserve"
+                    sodipodi:docname="linkedin profile.svg"
+                    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:svg="http://www.w3.org/2000/svg">
+                    <defs id="defs2">
+                        <linearGradient id="overlay-circle-gradient">
+                            <stop
+                            style="stop-color:#446E2E;stop-opacity:1;"
+                            offset="0"
+                            id="left-bottom-stop" />
+                            <stop
+                            style="stop-color:#000000;stop-opacity:0;"
+                            offset="1"
+                            id="right-top-stop" />
+                        </linearGradient>
+                        <linearGradient
+                            xlink:href="#overlay-circle-gradient"
+                            id="linearGradient5958"
+                            x1="34.373016"
+                            y1="97.87925"
+                            x2="58.266445"
+                            y2="71.889893"
+                            gradientUnits="userSpaceOnUse" />
+                    </defs>
+                    <g>
+                        <path
+                            id="overlay-text-bg"
+                            d="M 0,0 V 132.29167 H 132.29167 V 0 Z M 66.145833,21.083468 A 45.06218,45.06218 0 0 1 111.2082,66.145833 45.06218,45.06218 0 0 1 66.145833,111.2082 45.06218,45.06218 0 0 1 21.083468,66.145833 45.06218,45.06218 0 0 1 66.145833,21.083468 Z" />
+                        <path
+                            id="text-circle-path"
+                            d="M 76.595273,127.28886 A 62.02951,62.02951 0 0 0 127.28886,55.696389 62.02951,62.02951 0 0 0 55.696387,5.0028092 62.02951,62.02951 0 0 0 5.0028029,76.59527 62.02951,62.02951 0 0 0 76.595273,127.28886 Z" />
+                        <text
+                            xml:space="preserve"
+                            id="overlay-text">
+                            <textPath
+                                xlink:href="#text-circle-path"
+                                startOffset="100%"
+                                style="fill: #EDF9EB"
+                                id="overlay-text-path">#CREATING</textPath>
+                        </text>
+                    </g>
+                </svg>
+            </div>
 
-        <label for="badge-text-input"><h2>Text</h2></label>
-        <input type="text" id="badge-text-input" maxlength="20" value="#CREATING">
+            <label for="badge-text-input"><h2>2. Configure</h2></label>
+            <input type="text" id="badge-text-input" maxlength="20" value="#CREATING">
 
-        <h2>Colors</h2>
+            <p>
+                <input type="color" id="badge-bg-color-input" value="#446E2E">
+                <label for="badge-bg-color-input">Background</label>
+            </p>
+            <p>
+                <input type="color" id="badge-text-color-input" value="#EDF9EB">
+                <label for="badge-text-color-input">Text</label>
+            </p>
+            
+            <h2>3. Download</h2>
+            <button id="download-button">Save file</button>
+            <h2>4. Update your profile</h2>
+            <p>
+                <a href="https://www.linkedin.com/help/linkedin/answer/a541850/add-change-edit-or-delete-your-linkedin-profile-photo" target="_blank">How to change your LinkedIn profile</a>
+            </p>
+        </main>
+    </div>
 
-        <input type="color" name="" id="badge-bg-color-input" value="#446E2E">
-        <label for="badge-bg-color-input">Background</label>
-        <br>
-        <input type="color" name="" id="badge-text-color-input" value="#EDF9EB">
-        <label for="badge-text-color-input">Text</label>
+    <div>
+        <canvas id="canvas-image" height="500" width="500"></canvas>
+    </div>
 
-        <div id="image-preview">
-            <img id="portrait-image" width="300" height="300" src="placeholder.jpg">
-            <svg
-                id="overlay-svg"
-                width="300"
-                height="300"
-                viewBox="0 0 132.29167 132.29169"
-                version="1.1"
-                id="svg5"
-                xml:space="preserve"
-                sodipodi:docname="linkedin profile.svg"
-                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-                xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:svg="http://www.w3.org/2000/svg">
-                <defs id="defs2">
-                    <linearGradient id="overlay-circle-gradient">
-                        <stop
-                        style="stop-color:#446E2E;stop-opacity:1;"
-                        offset="0"
-                        id="left-bottom-stop" />
-                        <stop
-                        style="stop-color:#000000;stop-opacity:0;"
-                        offset="1"
-                        id="right-top-stop" />
-                    </linearGradient>
-                    <linearGradient
-                        xlink:href="#overlay-circle-gradient"
-                        id="linearGradient5958"
-                        x1="34.373016"
-                        y1="97.87925"
-                        x2="58.266445"
-                        y2="71.889893"
-                        gradientUnits="userSpaceOnUse" />
-                </defs>
-                <g>
-                    <path
-                        id="overlay-text-bg"
-                        d="M 0,0 V 132.29167 H 132.29167 V 0 Z M 66.145833,21.083468 A 45.06218,45.06218 0 0 1 111.2082,66.145833 45.06218,45.06218 0 0 1 66.145833,111.2082 45.06218,45.06218 0 0 1 21.083468,66.145833 45.06218,45.06218 0 0 1 66.145833,21.083468 Z" />
-                    <path
-                        id="text-circle-path"
-                        d="M 76.595273,127.28886 A 62.02951,62.02951 0 0 0 127.28886,55.696389 62.02951,62.02951 0 0 0 55.696387,5.0028092 62.02951,62.02951 0 0 0 5.0028029,76.59527 62.02951,62.02951 0 0 0 76.595273,127.28886 Z" />
-                    <text
-                        xml:space="preserve"
-                        id="overlay-text">
-                        <textPath
-                            xlink:href="#text-circle-path"
-                            startOffset="100%"
-                            style="fill: #EDF9EB"
-                            id="overlay-text-path">#CREATING</textPath>
-                    </text>
-                </g>
-            </svg>
-        </div>
-        <button id="download-button">Download</button>
-        <div>
-            <canvas id="canvas-image" height="500" width="500"></canvas>
-        </div>
-        <p>
-            <a href="https://www.linkedin.com/help/linkedin/answer/a541850/add-change-edit-or-delete-your-linkedin-profile-photo" target="_blank">How to change your LinkedIn profile</a>
-        </p>
-    </main>
     <footer>
         <p>
-            🇸🇪 Made in Sweden by <a href="https://alexewerlof.com/" target="_blank">Alex Ewerlöf</a>
-            |
-            <a href="https://github.com/alexewerlof/badge" target="_blank">README</a>
+            Support my work by subscribing to my newsletter about technical leadership, software reliability, and growth.
         </p>
         <p>
-            We don't track you or upload your image anywhere. Everything is done in your browser.
-            Enjoy and spread it if you find it useful.
+            This app doesn't track you or upload your image anywhere.
+        </p>
+        <p>
+            🇸🇪 Made in Sweden by <a href="https://alexewerlof.com/" target="_blank">Alex Ewerlöf</a>
         </p>
     </footer>
     <script src="index.js"></script>

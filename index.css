@@ -18,33 +18,44 @@ a, a:visited {
 }
 
 input[type="text"] {
-    background-color: inherit;
-    color: inherit;
+    background-color: #FFF5E6;
+    color: #001426;
     border-style: none;
-    border: 1px solid #FFBC52;
+    border: none;
     padding: 0.5em;
     font-family: inherit;
     font-size: 1em;
 }
 
+input[type="color"] {
+    border: none;
+}
+
 button {
+    font-family: 'Alata', sans-serif;
     background-color: #FFBC52;
     padding: 1em;
     border-style: none;
+    font-size: 1em;
+}
+
+#app {
+    box-shadow: 0 0 1em black;
+    margin: 2em;
+    border-radius: 0.8em;
 }
 
 header {
     padding: 1em;
-    margin: 1em 1em 0 1em;
     text-align: center;
     background-color: #001B33;
     border-top-left-radius: 0.8em;
     border-top-right-radius: 0.8em;
+    margin-bottom: 1px;
 }
 
 main {
-    padding: 2em 1em;
-    margin: 0 1em;
+    padding: 2em;
     border-bottom-left-radius: 0.8em;
     border-bottom-right-radius: 0.8em;
     background-color: #001426;
@@ -54,12 +65,13 @@ footer {
     padding: 1em;
     margin-top: 3em;
     text-align: center;
+    text-shadow: 0 0 0.3em #FFBC52;
 }
 
 #image-preview {
     position: relative;
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
     margin: 1em 0;
 }
 
@@ -73,6 +85,6 @@ footer {
 #canvas-image {
     /* for debugging purpose you can make it visible */
     display: none;
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
 }

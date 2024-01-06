@@ -4,7 +4,7 @@
 
 This is a tiny web app that puts a badged on your profile picture consistent with LinkedIn style but with your prefered text and colors.
 
-👉[**See it live**](https://badge.alexewerlof.com/)
+👉[**Use it live**](https://badge.alexewerlof.com/)
 
 ## Why?
 
@@ -18,22 +18,13 @@ Regardless of your opinion on the matter, the badge is a great place to spice up
 
 ## How does it work?
 
-- Upload a profile picture. The image stays in your browser. This app doesn't have any backend.
-- The image should be have a square ratio. We recommend `500px` width and `500px` height.
-- Tweak the settings to your liking.
-- Download the image
-- Go to your LinkedIn profile and [update your image](https://www.linkedin.com/help/linkedin/answer/a541850/add-change-edit-or-delete-your-linkedin-profile-photo)
-
-## No, I mean how does it really work?
-
 This is a very simple application using vanilla JavaScript (no frameworks).
 
-* The trick is to use a `<svg>` that overlays the image file in a hidden `<canvas>` element.
-* Upon tweaking the attibutes a simple JavaScript function updates the relevant element in `<svg>`.
-* The code is quick and dirty and I got a bit of help from [Copilot](https://github.com/features/copilot) too.
-* The `<canvas>` is normally hidden (you can make it visible by commenting out the `display: none` in the CSS).
-* Upon change of any property, the `<canvas>` is updated.
+* The trick is to use a `<svg>` that overlays the image file that is loaded into an `<img>`.
+* Upon tweaking the settings a simple JavaScript function updates the relevant element in the `<svg>`.
+* This also redraws a `<canvas>` element. The `<canvas>` is normally hidden (you can make it visible by commenting out the `display: none` in the CSS).
 * Upon download, the contents of the `<canvas>` is converted to `image/png`, put in a the `href` attribute of a `<link>` which is then programmatically clicked
+* The code is quick and dirty and I got a bit of help from [Copilot](https://github.com/features/copilot) too.
 
 # How can I support you?
 
