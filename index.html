@@ -26,15 +26,20 @@
 <body>
     <div id="app">
         <header>
-            <h1>LinkedIn profile badge</h1>
+            <h1>Profile Badge Creator</h1>
             <p>
-                Looking to stand out on LinkedIn with a custom badge? This privacy focused open source app does exactly that.
-                <a href="https://github.com/alexewerlof/badge" target="_blank">Read more...</a>
+                Stand out on LinkedIn with a custom badge on your profile picture.
             </p>
         </header>    
         <main>
             <label for="portrait-image-upload"><h2>1. Choose Portrait</h2></label>
-            <p>Choose a picture that is in square aspect ratio. We recommend 500x500px. The photo will not leave your browser. All processing is done on your machine.</p>
+            <p>
+                Choose a picture that is in square aspect ratio (example: 500x500 pixels).
+            </p>
+            <p>
+                The photo will not leave your browser.
+                All processing is done in your browser. No data is collected.
+            </p>
             <input type="file" id="portrait-image-upload" accept="image/*">
 
             <div id="image-preview">
@@ -105,8 +110,8 @@
                 <label for="badge-text-color-input">Text</label>
             </p>
             
-            <h2>3. Download</h2>
-            <button id="download-button" type="button">Save file</button>
+            <h2>3. Save the file</h2>
+            <button id="download-button" type="button">Download</button>
             <h2>4. Update your profile</h2>
             <p>
                 <a href="https://www.linkedin.com/help/linkedin/answer/a541850/add-change-edit-or-delete-your-linkedin-profile-photo" target="_blank">How to change your LinkedIn profile</a>
@@ -120,10 +125,21 @@
 
     <footer>
         <p>
-            Subscribing to <a href="https://blog.alexewerlof.com/subscribe" target="_blank">my newsletter about technical leadership, software reliability, and growth.</a>
+            This app is completely free and
+            <a href="https://github.com/alexewerlof/badge" target="_blank">
+                open source
+            </a>.
         </p>
         <p>
-            This app doesn't track you or upload your image anywhere.
+            If you want to give me a tip, you can subscribe to
+            <a href="https://blog.alexewerlof.com/subscribe" target="_blank">
+                my newsletter
+            </a>
+            about technical leadership, software reliability, and growth.
+            This also gives you access to my book 
+            <a href="https://blog.alexewerlof.com/subscribe" target="_blank">
+                Reliability Engineering Mindset
+            </a>
         </p>
         <p>
             🇸🇪 Made in Sweden by <a href="https://alexewerlof.com/" target="_blank">Alex Ewerlöf</a>

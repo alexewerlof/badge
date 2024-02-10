@@ -1,15 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Roboto&family=RobotoMono&display=swap');
 
+:root {
+    --max-width: 600px;
+    --fg-color: #FFF5E6;
+    --bg-color: #001426;
+    --primary-color: #FFBC52;
+}
+
 body {
     background-color: #000C17;
-    color: #FFF5E6;
+    color: var(--fg-color);
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
 }
 
 h1, h2, h3 {
-    color: #FFBC52;
+    color: var(--primary-color);
     font-family: 'Alata', sans-serif;
 }
 
@@ -18,8 +25,8 @@ a, a:visited {
 }
 
 input[type="text"] {
-    background-color: #FFF5E6;
-    color: #001426;
+    background-color: var(--fg-color);
+    color: var(--bg-color);
     border-style: none;
     border: none;
     padding: 0.5em;
@@ -33,15 +40,17 @@ input[type="color"] {
 
 button {
     font-family: 'Alata', sans-serif;
-    background-color: #FFBC52;
+    background-color: var(--primary-color);
     padding: 1em;
     border-style: none;
     font-size: 1em;
+    cursor: pointer;
 }
 
 #app {
     box-shadow: 0 0 1em black;
-    margin: 2em;
+    margin: 2em auto;
+    max-width: var(--max-width);
     border-radius: 0.8em;
 }
 
@@ -58,14 +67,15 @@ main {
     padding: 2em;
     border-bottom-left-radius: 0.8em;
     border-bottom-right-radius: 0.8em;
-    background-color: #001426;
+    background-color: var(--bg-color);
 }
 
 footer {
     padding: 1em;
-    margin-top: 3em;
+    margin: 3em auto;
     text-align: center;
-    text-shadow: 0 0 0.3em #FFBC52;
+    text-shadow: 0 0 0.6em black;
+    max-width: var(--max-width);
 }
 
 #image-preview {
