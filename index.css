@@ -4,20 +4,25 @@
     --max-width: 600px;
     --fg-color: #FFF5E6;
     --bg-color: #001426;
+    --bg-light-color: #001B33;
+    --bg-dark-color: #000C17;
     --primary-color: #FFBC52;
+    --border-radius: 0.8em;
 }
 
 body {
-    background-color: #000C17;
+    background-color: var(--bg-dark-color);
     color: var(--fg-color);
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6em;
 }
 
 h1, h2, h3 {
     color: var(--primary-color);
     font-family: 'Alata', sans-serif;
+    margin-top: 2em;
 }
 
 a, a:visited {
@@ -51,22 +56,31 @@ button {
     box-shadow: 0 0 1em black;
     margin: 2em auto;
     max-width: var(--max-width);
-    border-radius: 0.8em;
+    border-radius: var(--border-radius);
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --border-radius: 0;
+    }
+    #app {
+        margin: 0;
+    }
 }
 
 header {
     padding: 1em;
     text-align: center;
-    background-color: #001B33;
-    border-top-left-radius: 0.8em;
-    border-top-right-radius: 0.8em;
+    background-color: var(--bg-light-color);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
     margin-bottom: 1px;
 }
 
 main {
     padding: 2em;
-    border-bottom-left-radius: 0.8em;
-    border-bottom-right-radius: 0.8em;
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
     background-color: var(--bg-color);
 }
 
