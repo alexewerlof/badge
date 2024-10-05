@@ -2,6 +2,14 @@ function getById(id) {
     return document.getElementById(id)
 }
 
+function sanitizeHTML(str) {
+    return str.replace(/&/g, '&amp;')
+              .replace(/</g, '&lt;')
+              .replace(/>/g, '&gt;')
+              .replace(/"/g, '&quot;')
+              .replace(/'/g, '&#39;');
+}
+
 // Creates a new image and sets its src property, then waits for it to load
 function imageWithLoadedSrc(src) {
     return new Promise((resolve, reject) => {
@@ -71,7 +79,7 @@ getById('portrait-image-upload').addEventListener('change', function(event) {
 })
 
 getById('badge-text-input').addEventListener('input', () => {
-    getById('overlay-text-path').innerHTML = getById('badge-text-input').value;
+    getById('overlay-text-path').innerHTML = sanitizeHTML(getById('badge-text-input').value);
 });
 
 getById('badge-bg-color-input').addEventListener('input', () => {
