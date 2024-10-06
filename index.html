@@ -38,9 +38,11 @@
             </p>
             <p>
                 The photo will not leave your browser.
-                All processing is done in your browser. No data is collected.
+                All processing is done locally.
+                No data is collected.
             </p>
-            <input type="file" id="portrait-image-upload" accept="image/*">
+            <button id="upload-button" type="button">↥ Upload</button>
+            <input type="file" id="portrait-image-upload" accept="image/*" hidden>
 
             <div id="image-preview">
                 <img title="Example of custom LinkedIn profile image" id="portrait-image" width="200" height="200" src="placeholder.jpg" alt="Example of custom LinkedIn badge created with our web app">
@@ -99,8 +101,14 @@
             </div>
 
             <label for="badge-text-input"><h2>2. Configure</h2></label>
+            <p>
+                You can use extra spaces in the end to center the text.
+            </p>
             <input type="text" id="badge-text-input" maxlength="20" value="#CREATING">
 
+            <p>
+                You can drag your mouse on the color selector for a live preview of the colors.
+            </p>
             <p>
                 <input type="color" id="badge-bg-color-input" value="#446E2E">
                 <label for="badge-bg-color-input">Background</label>
@@ -111,7 +119,7 @@
             </p>
             
             <h2>3. Save the file</h2>
-            <button id="download-button" type="button">Download</button>
+            <button id="download-button" type="button">↧ Download</button>
             <h2>4. Update your profile</h2>
             <p>
                 🔗
@@ -129,18 +137,14 @@
     <footer>
         <p>
             This app is completely free and
-            <a href="https://github.com/alexewerlof/badge" target="_blank">
-                open source
-            </a>.
+            <a href="https://github.com/alexewerlof/badge" target="_blank">open source</a>.
         </p>
         <p>
             If you want to support me, you can subscribe to
-            <a href="https://blog.alexewerlof.com/subscribe" target="_blank">
-                my newsletter
-            </a>
+            <a href="https://blog.alexewerlof.com/subscribe" target="_blank">my newsletter</a>
             about technical leadership, software reliability, and growth.
             This also gives you access to my book 
-            <a href="https://blog.alexewerlof.com/subscribe" target="_blank">
+            <a href="https://blog.alexewerlof.com/p/rem" target="_blank">
                 Reliability Engineering Mindset
             </a>
         </p>
