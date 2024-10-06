@@ -92,6 +92,10 @@ getById('badge-text-color-input').addEventListener('input', () => {
     getById('overlay-text-path').style.fill = badgeTextColor;
 });
 
+getById('upload-button').addEventListener('click', () => {
+    getById('portrait-image-upload').click();
+})
+
 getById('download-button').addEventListener('click', () => {
     download();
 })
